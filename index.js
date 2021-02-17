@@ -35,7 +35,7 @@ function indexAt(node, collection, list){
   return currentIndex;
 }
 
-// return the address of a given node
+// returns the address of a given node
 function addressAt(index, list, collection) {
   if (index === 0) {
     return list;
@@ -45,7 +45,7 @@ function addressAt(index, list, collection) {
   }
 }
 
-// insert node at provided index while maintaining order
+// inserts node at provided index while maintaining order
 function insertNodeAt(index, newAddress, list, collection) {
   let prevNode = nodeAt(index-1, list, collection);
   let nextNode = nodeAt(index, list, collection);
@@ -56,7 +56,7 @@ function insertNodeAt(index, newAddress, list, collection) {
   newNode.next = nextNodeAddress;
 }
 
-// delete the node at provided index while maintaining order
+// deletes the node at provided index while maintaining order
 function deleteNodeAt(index, list, collection) {
   let prevNode;
   let currentNode = headNode(list, collection);
